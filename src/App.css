@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&display=swap');
+* {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.text-msg{
+  font-weight: 400 !important;
+}
+
+@keyframes rotateAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rotate{
+      animation: rotateAnimation 0.3s ease-in-out; /* Mengulang animasi selamanya */
+}
+
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 25px;
+  height: 25px;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.sdp .sdp--grid .sdp--square-btn .sdp--date-btn .sdp--date-btn__selected .sdp--text {
+  color: red !important;
+}
+
+.sdp--date-btn__selected.sdp--square-btn {
+  border-radius: 50% !important;
+  border: 2px solid blue; 
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.loading-container {
+  display: flex border-2;
+}
+.animate {
+  color: white;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  border: 8px solid;
+  border-radius: 50%;
+  border-color: #7b7b7b #7b7b7b #7b7b7b transparent;
+  width: 80px;
+  height: 80px;
+  animation: screw 1.2s linear infinite;
+}
+
+
+@keyframes screw {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes screw-two {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
